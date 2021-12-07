@@ -1,0 +1,90 @@
+@use "variables" as *;
+
+.navigation{
+  width:100%;
+  height:80px;
+  background-color: $transparentBlack;
+  padding:16px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  &.show-navigation{
+    align-items: start;
+    height:550px;
+      nav{
+        display: block;
+        top:50px;
+        z-index: 1000;
+      }
+  }
+  &>div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menu-btn{
+      width:25px;
+      height:25px;
+      svg{
+        line{
+          stroke: white;
+          stroke-width: 4px;
+        }
+      }
+      @media(min-width: 768px){
+        display: none;
+      }
+    }
+  }
+  nav{
+    margin-top:32px;
+    position: absolute;
+    display:none;
+    ul li a{
+      color:white;
+      font-size:1.8rem;
+      padding:16px 0;
+      display:flex;
+      align-items: center;
+      &:hover, &.active{
+        font-weight:bold;
+      }
+      div{
+        width:40px;
+        height:40px;
+        background-color: $transparentBlack;
+        border-radius:40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      span{
+        margin-left:16px;
+      }
+    }
+    @media(min-width: 768px){
+      position: relative;
+      display: block;
+    }
+  }
+
+  .scene-audio{
+    display: none;
+  }
+
+  @media(min-width: 768px){
+    width:300px;
+    height:100vh;
+    display: block;
+    .scene-audio{
+      display: block;
+      position: absolute;
+      bottom: 50px;
+      width:100%;
+      padding-right:35px;
+      audio{
+        width:100%;
+      }
+    }
+  }
+}

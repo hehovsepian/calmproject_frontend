@@ -1,0 +1,75 @@
+@use "variables" as *;
+
+.profile{
+  .menu {
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      transition: all 0.2s ease 0s;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        span {
+          font-size: 1.8rem;
+          margin: 0 12px;
+        }
+      }
+
+      & > svg {
+        transform: rotate(180deg);
+      }
+    }
+    & > p {
+      font-size: 1.4rem;
+      color: black;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      margin-top: 26px;
+    }
+  }
+  .stats{
+    h1{
+      display: inline;
+      margin-left: 18px;
+    }
+    .mindful-days{
+      color:white;
+      font-size:1.8rem;
+      text-align:center;
+      p:first-of-type{
+        font-size:2.8rem;
+        line-height: 100%;
+      }
+      p{
+        margin:8px;
+      }
+    }
+    .other-stats{
+      color:white;
+      font-size:1.4rem;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+  }
+  .change-password{
+   h1{
+      display: inline;
+      margin-left: 18px;
+    }
+    p{
+      color:white;
+      width:100%;
+      text-align:center;
+    }
+  }
+}
